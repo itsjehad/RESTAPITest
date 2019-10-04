@@ -17,7 +17,7 @@ public class GitHubRest {
         if(json != null){
             GitHubRepository gitHubRepository = new Gson().fromJson(json, GitHubRepository.class);
             if(gitHubRepository != null){
-                logger.info("Object constructed: " + gitHubRepository.getTotalCount().toString());
+                logger.info("Total item retrieved: " + gitHubRepository.getTotalCount().toString());
             }
         }
 

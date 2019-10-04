@@ -20,7 +20,7 @@ public class RestAPI {
             for (Map.Entry<String, String> entry: requestInteface.getQueryParams().entrySet( )) {
                 webResource = webResource.queryParam(entry.getKey(), entry.getValue());
             }
-            WebResource.Builder webResourceBuilder = webResource.header("Content-type", "application/json");
+            WebResource.Builder webResourceBuilder = webResource.getRequestBuilder();
 
             for (Map.Entry<String, String> entry: requestInteface.getHeaders().entrySet( )) {
                 webResourceBuilder = webResourceBuilder.header(entry.getKey(), entry.getValue());
